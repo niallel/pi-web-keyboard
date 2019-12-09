@@ -5,10 +5,14 @@ function sendKeys(keys) {
     const result = parseCommand(keys);
 
     const buf = Buffer.from(result.command, 'hex');
-    fs.writeFileSync('/dev/hidg0', buf, {flag: 'r+'});
+    try {
+        fs.writeFileSync('/dev/hidg0', buf, {flag: 'r+'});
 
-    // write the release keys command
-    fs.writeFileSync('/dev/hidg0',Buffer.from('0000000000000000', 'hex'), {flag: 'r+'});
+        // write the release keys command
+        fs.writeFileSync('/dev/hidg0',Buffer.from('0000000000000000', 'hex'), {flag: 'r+'});
+    } catch (error) {
+        console.log(error);
+    }
     
     return(result);
 }
