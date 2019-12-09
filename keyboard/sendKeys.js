@@ -11,7 +11,11 @@ function sendKeys(keys) {
         // write the release keys command
         fs.writeFileSync('/dev/hidg0',Buffer.from('0000000000000000', 'hex'), {flag: 'r+'});
     } catch (error) {
-        console.log(error);
+        return({
+            status: false,
+            message: error.message,
+            error: error
+        });
     }
     
     return(result);

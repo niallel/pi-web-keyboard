@@ -9,17 +9,14 @@ router.get('/*', function (req, res) {
 
   const result = sendKeys(parameters);
 
-  if (result) {
+  if (result.command) {
     res.json({
       status: true,
       command: result,
       message: 'Keys sent'
     });
   } else {
-    res.json({
-      status: false,
-      message: 'No Matching Keys sent'
-    });
+    res.json(result);
   }
 
  
