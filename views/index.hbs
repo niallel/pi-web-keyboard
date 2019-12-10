@@ -1,2 +1,21 @@
 <h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+
+<style>
+    .keyboard-button {
+        margin: 10px;
+    }
+</style>
+
+<div>
+    {{#each keyTable}}
+        <button class="keyboard-button" onclick="sendKey('{{this}}')">{{this}}</button>
+    {{/each}}
+</div>
+
+<script>
+    function sendKey(key) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "/api/" + key, true);
+        xhttp.send();
+    }
+</script>
