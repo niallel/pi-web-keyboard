@@ -9,6 +9,7 @@ function sendKeys(keys) {
     const buf = Buffer.from(result.command, 'hex');
     
     try {
+        fs.statSync('/dev/hidg0');
         fs.writeFileSync('/dev/hidg0', buf, {flag: 'r+'});
 
         // write the release keys command
