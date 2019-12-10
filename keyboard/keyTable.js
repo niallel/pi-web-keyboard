@@ -1,4 +1,5 @@
 module.exports = {
+    'RELEASE':  {value: '00', type: 'standard', shift: false},
     'a':  {value: '04', type: 'standard', shift: false},
     'b':  {value: '05', type: 'standard', shift: false},
     'c':  {value: '06', type: 'standard', shift: false},
@@ -207,6 +208,15 @@ module.exports = {
     'LEFTCONTROL':  {value: 0x01, type: 'control', shift: false},
     'LEFTSHIFT':  {value: 0x02, type: 'control', shift: false},
     'LEFTALT':  {value: 0x04, type: 'control', shift: false},
-    'LEFTGUI':  {value: 0x08, type: 'control', shift: false}
+    'LEFTGUI':  {value: 0x08, type: 'control', shift: false},
+
+    'LEFTCONTROLPRESS':  {value: 0xe0, type: 'standard', shift: false},
+    'LEFTSHIFTPRESS':  {value: 0xe1, type: 'standard', shift: false},
+    'LEFTALTPRESS':  {value: 0xe2, type: 'standard', shift: false},
+    'LEFTGUIPRESS':  {value: 0xe3, type: 'standard', shift: false},
+    'RIGHTCONTROLPRESS':  {value: 0xe4, type: 'standard', shift: false},
+    'RIGHTSHIFTPRESS':  {value: 0xe5, type: 'standard', shift: false},
+    'RIGHTALTPRESS':  {value: 0xe6, type: 'standard', shift: false},
+    'RIGHTGUIPRESS':  {value: 0xe7, type: 'standard', shift: false}
 
 };
