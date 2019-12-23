@@ -4,22 +4,174 @@
     .keyboard-button {
         margin: 10px;
     }
+    
+    .remote-image-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .remote-image {
+        background-image: url('/images/fire-tv-remote-buttons-removed.png');
+        width: 224px;
+        height: 827px;
+        position: relative;
+    }
+
+    .rb {
+        position: absolute;
+        border: none;
+        background-color: transparent;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .rb-sm-round {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+    }
+
+    .rb-left {
+        top: 176px;
+        left: 23px;
+        width: 35px;
+        height: 100px;
+    }
+
+    .rb-right {
+        top: 176px;
+        left: 165px;
+        width: 35px;
+        height: 100px;
+    }
+
+    .rb-up {
+        top: 140px;
+        left: 62px;
+        width: 100px;
+        height: 35px;
+    }
+
+    .rb-down {
+        top: 282px;
+        left: 62px;
+        width: 100px;
+        height: 35px;
+    }
+
+    .rb-select {
+        top: 174px;
+        left: 60px;
+        width: 104px;
+        height: 104px;
+        border-radius: 50%;
+    }
+
+    .rb-back {
+        top: 332px;
+        left: 23px;
+    }
+
+    .rb-home {
+        top: 332px;
+        left: 88px;
+    }
+
+    .rb-menu {
+        top: 332px;
+        left: 151px;
+    }
+
+    .rb-rewind {
+        top: 396px;
+        left: 23px;
+    }
+
+    .rb-play {
+        top: 396px;
+        left: 88px;
+    }
+
+    .rb-forward {
+        top: 396px;
+        left: 151px;
+    }
+
+    .rb-volup {
+        top: 461px;
+        left: 88px;
+    }
+
+    .rb-voldown {
+        top: 524px;
+        left: 88px;
+    }
+
+    .rb-mute {
+        top: 590px;
+        left: 88px;
+    }
 </style>
 
+<div class="remote-image-container">
+    <div class="remote-image">
+
+        <button class="rb rb-left" onmouseup="sendKeyboardReset()" onmousedown="sendKeyboard('LEFT')"></button>
+        <button class="rb rb-right" onmouseup="sendKeyboardReset()" onmousedown="sendKeyboard('RIGHT')"></button>
+        <button class="rb rb-up" onmouseup="sendKeyboardReset()" onmousedown="sendKeyboard('UP')"></button>
+        <button class="rb rb-down" onmouseup="sendKeyboardReset()" onmousedown="sendKeyboard('DOWN')"></button>
+
+        <button class="rb rb-sm-round rb-select" onmouseup="sendKeyboardReset()" onmousedown="sendKeyboard('ENTER')"></button>
+        
+        <button class="rb rb-sm-round rb-back" onmouseup="sendKeyboardReset()" onmousedown="sendKeyboard('ESCAPE')"></button>
+        <button class="rb rb-sm-round rb-home" onmouseup="sendConsumerReset()" onmousedown="sendConsumer('HOME')"></button>
+        <button class="rb rb-sm-round rb-menu" onmouseup="sendKeyboardReset()" onmousedown="sendKeyboard('APPLICATION')"></button>
+
+        <button class="rb rb-sm-round rb-rewind" onmouseup="sendConsumerReset()" onmousedown="sendConsumer('REWIND')"></button>
+        <button class="rb rb-sm-round rb-play" onmouseup="sendConsumerReset()" onmousedown="sendConsumer('PLAY')"></button>
+        <button class="rb rb-sm-round rb-forward" onmouseup="sendConsumerReset()" onmousedown="sendConsumer('FORWARD')"></button>
+
+        <button class="rb rb-sm-round rb-volup" onmouseup="sendConsumerReset()" onmousedown="sendConsumer('VOLUP')"></button>
+        <button class="rb rb-sm-round rb-voldown" onmouseup="sendConsumerReset()" onmousedown="sendConsumer('VOLDOWN')"></button>
+        <button class="rb rb-sm-round rb-mute" onmouseup="sendConsumerReset()" onmousedown="sendConsumer('MUTE')"></button>
+
+    </div>
+</div>
+
+
 <div>
-    <H1>Consumer</H1>
-    <button class="keyboard-button" onmouseup="sendReset()" onmousedown="sendConsumer('PLAY')">Play</button>
-    <button class="keyboard-button" onmouseup="sendReset()" onmousedown="sendConsumer('STOP')">Stop</button>
-    <button class="keyboard-button" onmouseup="sendReset()" onmousedown="sendConsumer('REWIND')">&lt; Rewind</button>
-    <button class="keyboard-button" onmouseup="sendReset()" onmousedown="sendConsumer('FORWARD')">&gt; Forward</button>
-    <button class="keyboard-button" onmouseup="sendReset()" onmousedown="sendConsumer('HOME')">Home</button>
-    <button class="keyboard-button" onmouseup="sendReset()" onmousedown="sendConsumer('MUTE')">Mute</button>
-    <button class="keyboard-button" onmouseup="sendReset()" onmousedown="sendConsumer('VOLUP')">Volume +</button>
-    <button class="keyboard-button" onmouseup="sendReset()" onmousedown="sendConsumer('VOLDOWN')">Volume -</button>
+    <div>
+        <button class="keyboard-button" onmouseup="sendConsumerReset()" onmousedown="sendConsumer('HOME')">Home</button>
+    </div>
+    <div>
+        <button class="keyboard-button" onmouseup="sendKeyboardReset()" onmousedown="sendKeyboard('LEFT')">Left</button>
+        <button class="keyboard-button" onmouseup="sendKeyboardReset()" onmousedown="sendKeyboard('RIGHT')">Right</button>
+        <button class="keyboard-button" onmouseup="sendKeyboardReset()" onmousedown="sendKeyboard('UP')">Up</button>
+        <button class="keyboard-button" onmouseup="sendKeyboardReset()" onmousedown="sendKeyboard('DOWN')">Down</button>
+        <button class="keyboard-button" onmouseup="sendKeyboardReset()" onmousedown="sendKeyboard('ENTER')">Select</button>
+    </div>
+    <div>
+        <button class="keyboard-button" onmouseup="sendKeyboardReset()" onmousedown="sendKeyboard('ESCAPE')">Cancel</button>
+        <button class="keyboard-button" onmouseup="sendKeyboardReset()" onmousedown="sendKeyboard('APPLICATION')">Menu</button>
+    </div>
+    <div>
+        <button class="keyboard-button" onmouseup="sendConsumerReset()" onmousedown="sendConsumer('PLAY')">Play</button>
+        <button class="keyboard-button" onmouseup="sendConsumerReset()" onmousedown="sendConsumer('STOP')">Stop</button>
+        <button class="keyboard-button" onmouseup="sendConsumerReset()" onmousedown="sendConsumer('REWIND')">&lt; Rewind</button>
+        <button class="keyboard-button" onmouseup="sendConsumerReset()" onmousedown="sendConsumer('FORWARD')">&gt; Forward</button>
+    </div>
+    <div>
+        <p>Volume controls might not have any effect depending on Fire TV Setup</p>
+        <button class="keyboard-button" onmouseup="sendConsumerReset()" onmousedown="sendConsumer('MUTE')">Mute</button>
+        <button class="keyboard-button" onmouseup="sendConsumerReset()" onmousedown="sendConsumer('VOLUP')">Volume +</button>
+        <button class="keyboard-button" onmouseup="sendConsumerReset()" onmousedown="sendConsumer('VOLDOWN')">Volume -</button>
+    </div>
+
 </div>
 
 <script>
-    function sendReset() {
+    function sendConsumerReset() {
         var xhttp = new XMLHttpRequest();
         xhttp.open("GET", "/consumer/RESET", true);
         xhttp.send();
@@ -28,6 +180,18 @@
     function sendConsumer(key) {
         var xhttp = new XMLHttpRequest();
         xhttp.open("GET", "/consumer/HOLD/" + key, true);
+        xhttp.send();
+    }
+
+    function sendKeyboardReset() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "/keyboard/RESET", true);
+        xhttp.send();
+    }
+
+    function sendKeyboard(key) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "/keyboard/HOLD/" + key, true);
         xhttp.send();
     }
 </script>
