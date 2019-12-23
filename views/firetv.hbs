@@ -1,0 +1,33 @@
+<h1>{{title}}</h1>
+
+<style>
+    .keyboard-button {
+        margin: 10px;
+    }
+</style>
+
+<div>
+    <H1>Consumer</H1>
+    <button class="keyboard-button" onmouseup="sendReset()" onmousedown="sendConsumer('PLAY')">Play</button>
+    <button class="keyboard-button" onmouseup="sendReset()" onmousedown="sendConsumer('STOP')">Stop</button>
+    <button class="keyboard-button" onmouseup="sendReset()" onmousedown="sendConsumer('REWIND')">&lt; Rewind</button>
+    <button class="keyboard-button" onmouseup="sendReset()" onmousedown="sendConsumer('FORWARD')">&gt; Forward</button>
+    <button class="keyboard-button" onmouseup="sendReset()" onmousedown="sendConsumer('HOME')">Home</button>
+    <button class="keyboard-button" onmouseup="sendReset()" onmousedown="sendConsumer('MUTE')">Mute</button>
+    <button class="keyboard-button" onmouseup="sendReset()" onmousedown="sendConsumer('VOLUP')">Volume +</button>
+    <button class="keyboard-button" onmouseup="sendReset()" onmousedown="sendConsumer('VOLDOWN')">Volume -</button>
+</div>
+
+<script>
+    function sendReset() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "/consumer/RESET", true);
+        xhttp.send();
+    }
+
+    function sendConsumer(key) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "/consumer/HOLD/" + key, true);
+        xhttp.send();
+    }
+</script>

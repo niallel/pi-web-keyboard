@@ -7,14 +7,18 @@
 </style>
 
 <div>
-    <H1>Keyboard</H1>
+    <a href="/firetv">Amazon Fire TV</a>
+</div>
+
+<div>
+    <h2>Keyboard</h2>
     {{#each keyTable}}
         <button class="keyboard-button" onclick="sendKey('{{this}}')">{{this}}</button>
     {{/each}}
 </div>
 
 <div>
-    <H1>Consumer</H1>
+    <h2>Consumer</h2>
     <button class="keyboard-button" onclick="sendConsumer('PLAY')">Play</button>
     <button class="keyboard-button" onclick="sendConsumer('STOP')">Stop</button>
     <button class="keyboard-button" onclick="sendConsumer('REWIND')">&lt; Rewind</button>
