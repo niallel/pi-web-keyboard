@@ -68,7 +68,7 @@ function parseCommand(keys) {
                 break;
 
             case 'FORWARD':
-                command = "B600";
+                command = "B500";
                 keysMatched.push(keys[i]);
                 break;
 
