@@ -61,7 +61,7 @@ function parseCommand(keys) {
                     modifierKeys = modifierKeys | keyTable.SHIFT.value;
                 }
             } else if(keyTable[key].type === 'control') {
-                modifierKeys = modifierKeys | keyTable[key].value;
+                modifierKeys = modifierKeys | parseInt(keyTable[key].value,16);
             }
 
         } else {
