@@ -6,7 +6,7 @@ const sendConsumer = require('../consumer/sendConsumer');
 /* API page */
 router.get('/*', function (req, res) {
   const parameters = req.params[0].split('/');
-  console.log(`Parameters ${parameters} Number ${parameters.length}`);
+  console.log(`Consumer Parameters ${parameters}`);
 
   const result = sendConsumer(parameters);
 

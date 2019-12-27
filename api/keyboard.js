@@ -5,7 +5,7 @@ const sendKeys = require('../keyboard/sendKeys');
 /* API page */
 router.get('/*', function (req, res) {
   const parameters = req.params[0].split('/');
-  console.log(`Parameters ${parameters} Number ${parameters.length}`);
+  console.log(`Keyboard Parameters ${parameters}`);
 
   const result = sendKeys(parameters);
 
