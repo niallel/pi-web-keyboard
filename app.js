@@ -5,9 +5,10 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
 const keyboardRouter = require('./api/keyboard');
 const consumerRouter = require('./api/consumer');
+// Not implemented yet
+// const mouseRouter = require('./api/mouse');
 
 const app = express();
 
@@ -22,9 +23,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/keyboard', keyboardRouter);
 app.use('/consumer', consumerRouter);
+// Not implemented yet
+//app.use('/mouse', mouseRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
