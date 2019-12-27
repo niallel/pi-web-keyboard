@@ -1,5 +1,9 @@
 # Commands
 
+Commands that can be entered via the cli to test buttons are being pressed
+
+Firstly go to the root account:
+
 sudo su
 
 ## Keyboard
