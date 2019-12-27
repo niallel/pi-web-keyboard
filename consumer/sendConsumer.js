@@ -77,6 +77,11 @@ function parseCommand(keys) {
                 keysMatched.push(keys[i]);
                 break;
 
+            case 'BACK':
+                command = "2402";
+                keysMatched.push(keys[i]);
+                break;
+
             case 'MUTE':
                 command = "E200";
                 keysMatched.push(keys[i]);
